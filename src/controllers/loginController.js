@@ -1,3 +1,3 @@
 exports.index = (req, resp) => {
-    resp.render('index');
-}
+    resp.render('login');
+};

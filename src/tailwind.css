@@ -6,4 +6,9 @@
     shadow-md
 }
 
+.form-input {
+    @apply w-full h-full py-2 focus:outline-none focus:ring focus:border-blue-300 rounded-lg
+    bg-gray-200 text-pink-600 placeholder-gray-400 tracking-wide
+}
+
 @tailwind utilities;
