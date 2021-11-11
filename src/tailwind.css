@@ -2,7 +2,7 @@
 @tailwind components;
 
 .note {
-    @apply  p-2 flex flex-col justify-center items-start bg-yellow-600 rounded-md
+    @apply  py-2 px-4 flex flex-col justify-center items-start bg-yellow-600 rounded-md
     shadow-md
 }
 
