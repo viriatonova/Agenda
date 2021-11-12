@@ -10,6 +10,7 @@ route.get('/', homeController.index);
 
 // Routes Login
 route.get('/login', loginController.index);
+route.post('/login', loginController.handleLogin);
 
 // Routes Register
 route.get('/register', registerController.index);

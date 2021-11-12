@@ -39,6 +39,7 @@
     "express-session": "^1.17.2",
     "helmet": "^4.6.0",
     "mongoose": "^6.0.12",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "validator": "^13.7.0"
   }
 }

@@ -7,14 +7,15 @@
                 this agenda is version beta, your account will be 
                 remember just for seven days. 
             </p>
+            <%- include('includes/menssages'); %>
             <form class="w-full h-full mt-4 flex flex-col justify-center" action="/register" method="post">
                 <input type="hidden" name="_csrf" value="<%= _csrf %>">
-                <label class="ml-2" for="registername">Nome</label>
-                <input class="form-input mt-px px-3" type="text" name="registername" placeholder="Ex: João Silva">
+                <label class="ml-2" for="nome">Nome</label>
+                <input class="form-input mt-px px-3" type="text" name="nome" placeholder="Ex: João Silva">
                 <label class="mt-4 ml-2" for="email">E-mail</label>
-                <input class="form-input mt-px px-3" type="text" name="registeremail" placeholder="Ex: seuemail@mail.com">
-                <label class="mt-4 ml-2" for="registerpassword">Password</label>
-                <input class="form-input mt-px px-3" type="password" name="registerpassword">
+                <input class="form-input mt-px px-3" type="text" name="email" placeholder="Ex: seuemail@mail.com">
+                <label class="mt-4 ml-2" for="password">Password</label>
+                <input class="form-input mt-px px-3" type="password" name="password">
                 <button type="submit" class="w-full h-full mt-8 py-2 bg-green-700 rounded-lg text-white hover:bg-green-900 active:bg-pink-700">Sing up</button>
             </form>
             <div class="w-full mt-4 flex justify-center">
