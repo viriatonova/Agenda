@@ -7,6 +7,8 @@
 <% }%>
 <% if (success.length > 0) {%>
     <div class="w-full flex mt-4 px-6 py-4 self-center bg-green-300 text-green-900 rounded-lg">
-        <%= success %>
+        <% success.forEach(success =>{ %>
+            <%= success %><br>
+        <% }); %>
     </div>
 <% }%>

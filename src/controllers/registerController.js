@@ -20,7 +20,6 @@ exports.handleRegister = async function (req, resp) {
         req.session.save(function() {
             return resp.redirect('back');
         });
-        return resp.send(register.user);
     } catch (e) {
         console.log(e);
         return resp.render('404');
