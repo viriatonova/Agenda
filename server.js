@@ -16,9 +16,14 @@ const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const routes =  require('./routes.js');
 const path = require('path');
-const helmet = require('helmet');
+// const helmet = require('helmet');
 const csrf = require('csurf');
 const { middlewareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/default');
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Arquivos estáticos para a aplicação
+app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
     secret: process.env.SECRET,
@@ -27,30 +32,26 @@ const sessionOptions = session({
     saveUninitialized: false,
     cookie: {
         maxAge: 1000 * 60 * 24 * 7,
-        httpOnly: true
+        httpOnly: true,
     }
 });
 
 app.use(sessionOptions);
 app.use(flash());
 
-app.use(helmet());
+app.set('views', path.resolve(__dirname, 'src', 'views'));
+app.set('view engine', 'ejs');
+
+// app.use(helmet());
 app.use(csrf());
 
 //Middleware
-app.use(csrfMiddleware);
-app.use(checkCsrfError);
 app.use(middlewareGlobal);
+app.use(checkCsrfError);
+app.use(csrfMiddleware);
+
+// Routes
 app.use(routes);
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// Arquivos estáticos para a aplicação
-app.use(express.static(path.resolve(__dirname, 'public')));
-
-app.set('views', path.resolve(__dirname, 'src', 'views'));
-app.set('view engine', 'ejs');
 
 // Start app 
 app.on('pronto', () => {

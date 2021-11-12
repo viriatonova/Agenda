@@ -1,27 +1,25 @@
 <%- include('includes/head'); %>
 
-    <main class="w-full h-full flex justify-center items-cente">
-        <section class="w-1/2 h-full mt-8">
-            <h2 class="py-2 text-5xl text-pink-600 font-bold tracking-wider">Login</h2>
+    <main class="w-full h-full flex justify-center items-center">
+        <section class="w-1/2 h-full mt-8 px-12">
+            <h2 class="py-2 text-5xl text-pink-600 font-bold tracking-wider">Log In</h2>
             <p class="py-2 text-lg text-gray-600 font-light tracking-wide">
-                this agenda is a version beta, your account will be 
+                this agenda is version beta, your account will be 
                 remember just for seven days. 
             </p>
-            <form class="w-2/3 h-full mt-4 flex flex-col" action="/login/register" method="post">
+            <form class="w-full h-full mt-4 flex flex-col justify-center" action="/login" method="post">
                 <input type="hidden" name="_csrf" value="csrfToken">
                 <label class="ml-2" for="name">Nome</label>
                 <input class="form-input mt-px px-3" type="text" name="name" placeholder="Ex: João Silva">
-                <label class="mt-4 ml-2" for="email">E-mail</label>
-                <input class="form-input mt-px px-3" type="text" name="name" placeholder="Ex: seuemail@mail.com">
                 <label class="mt-4 ml-2" for="name">Password</label>
                 <input class="form-input mt-px px-3" type="password" name="password">
                 <button class="w-full h-full mt-8 py-2 bg-green-700 rounded-lg text-white hover:bg-green-900 active:bg-pink-700">Sing in</button>
             </form>
-            <div class="w-2/3 mt-4 flex justify-center">
+            <div class="w-full mt-4 flex justify-center">
                 <p>Don't have account?</p>
-                <a class="ml-2 font-bold" href="">Sing up</a>
+                <a class="ml-2 font-bold" href="/register">Sing up</a>
             </div>
-        </section>     
+        </section>
     </main>
     
 <%- include('includes/footer'); %>
