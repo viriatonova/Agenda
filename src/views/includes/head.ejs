@@ -10,12 +10,17 @@
 </head>
 <body class="w-full h-full"></body>
 
-    <header class="w-full h-auto py-2 px-8 flex bg-green-900 text-white">
+    <header class="w-full h-auto py-2 px-2 sm:px-8 flex bg-green-900 text-white">
         <a class="w-full"  href="/">
             <h1 class="w-full font-medium tracking-wide">Agenda Virtual</h1>
         </a>
         <div id="menu-right" class="w-full flex justify-end">
-            <a class="mr-10" href="/login"><span>Login</span></a>
-            <a class="" href="/"><span>User</span></a>
+            <a class="mr-4 sm:mr-10" href="/contato">Contato</a>
+            <% if(!user) { %>
+                <a class="mr-4 sm:mr-10" href="/login"><span>Login</span></a>
+            <% } else { %>
+                <span class="mr-4 sm:mr-10"><%= user.nome %></span>
+                <a href="/login/logout">Logout</a>
+            <% } %>
         </div>
     </header>

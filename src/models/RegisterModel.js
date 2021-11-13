@@ -17,6 +17,23 @@ class Register {
         this.user = null;
     }
 
+    async login() {
+        this.valida();
+        if (this.errors.length > 0 ) return; 
+        this.user = await RegisterModel.findOne({ email: this.body.email});
+
+        if (!this.user) {
+            this.errors.push("User don't exist");
+            return;
+        }
+
+        if (!bcryptjs.compareSync(this.body.password, this.user.password)) {
+            this.errors.push('Invalid password');
+            this.user = null;
+            return;
+        }
+    }
+
     async register() {
         this.valida();
         if (this.errors.length > 0) return;
