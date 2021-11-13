@@ -1,20 +1,20 @@
 <%- include('includes/head'); %>
 
     <main class="w-full h-full flex justify-center items-center">
-        <section class="w-full sm:w-1/2 h-full mt-8 px-12">
-            <h2 class="py-2 text-5xl text-pink-600 font-bold tracking-wider">Log In</h2>
-            <p class="py-2 text-lg text-gray-600 font-light tracking-wide">
+        <section class="form-geral">
+            <h2 class="titles">Log In</h2>
+            <p class="paragraphs">
                 this agenda is version beta, your account will be 
                 remember just for seven days. 
             </p>
             <%- include('includes/menssages'); %>
             <form class="w-full h-full mt-4 flex flex-col justify-center" action="/login/user" method="post">
                 <input type="hidden" name="_csrf" value="<%= _csrf %>">
-                <label class="ml-2" for="email">Email</label>
+                <label class="simpletext ml-2" for="email">Email</label>
                 <input class="form-input mt-px px-3" type="text" name="email" placeholder="Ex: youremail@email.com">
-                <label class="mt-4 ml-2" for="name">Password</label>
+                <label class="simpletext mt-4 ml-2" for="password">Password</label>
                 <input class="form-input mt-px px-3" type="password" name="password">
-                <button class="w-full h-full mt-8 py-2 bg-green-700 rounded-lg text-white hover:bg-green-900 active:bg-pink-700">Sing in</button>
+                <button class="w-full h-full mt-8 py-2 form-buttom">Sing in</button>
             </form>
             <div class="w-full mt-4 flex justify-center">
                 <p>Don't have account?</p>

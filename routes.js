@@ -3,6 +3,8 @@ const route = express.Router();
 const homeController = require('./src/controllers/homeController');
 const loginController = require('./src/controllers/loginController');
 const registerController = require('./src/controllers/registerController');
+const contatoController = require('./src/controllers/contatoController');
+const { loginRequired } = require('./src/middlewares/default')
 
 
 // Routes home
@@ -17,5 +19,10 @@ route.get('/login/logout', loginController.logout);
 // Routes Register
 route.get('/register', registerController.index);
 route.post('/register', registerController.handleRegister);
+
+// Rotas Contato
+route.get('/contato', loginRequired, contatoController.index);
+route.get('/contato/:id', loginRequired, contatoController.editContato);
+route.post('/contato/register', loginRequired, contatoController.register);
 
 module.exports = route; 

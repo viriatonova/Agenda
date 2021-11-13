@@ -1,0 +1,26 @@
+<%- include('includes/head'); %>
+
+    <main class="w-full h-full flex justify-center items-center">
+        <section class="form-geral">
+            <h2 class="titles">Create or Edit your Contacts</h2>
+            <%- include('includes/menssages'); %>
+            <form id="form-contato" class="w-full h-full mt-4 flex flex-col justify-center" action="/contato/register" method="post">
+                <input type="hidden" name="_csrf" value="<%= _csrf %>">
+                <label class="simpletext mt-2 ml-2" for="nome">First name</label>
+                <input class="form-input mt-px px-3" type="text" name="nome" placeholder="Ex: Friedrich">
+                <label class="simpletext mt-2 ml-2" for="sobrenome">Second name</label>
+                <input class="form-input mt-px px-3" type="text" name="sobrenome" placeholder="Ex: Friedrich">
+                <label class="simpletext mt-2 ml-2" for="phone">Phone number</label>
+                <input class="form-input mt-px px-3" type="tel" name="phone" placeholder="Ex: 88 95522 5544">
+                <label class="simpletext mt-2 ml-2" for="email">E-mail</label>
+                <input class="form-input mt-px px-3" type="text" name="email" placeholder="Ex: email@email.com">
+                <label class="simpletext mt-2 ml-2" for="description">Description</label>
+                <input class="form-input mt-px px-3" type="text" name="description" 
+                placeholder="Ex: description here" rows="4" cols="50" name="comment" form="form-contato"
+                >
+                <button class="w-full h-full mt-8 py-2 form-buttom">Submit</button>
+            </form>
+        </section>
+    </main>
+    
+<%- include('includes/footer'); %>
