@@ -13,10 +13,6 @@
     @apply text-base text-gray-600 font-normal tracking-wide
 }
 
-.note {
-    @apply  py-2 px-4 flex flex-col justify-center items-start bg-yellow-600 rounded-md
-    shadow-md
-}
 
 .form-input {
     @apply w-full h-full py-2 focus:outline-none focus:ring focus:border-blue-300 rounded-sm
@@ -30,5 +26,11 @@
 .form-geral {
     @apply w-full sm:w-2/3 h-full mt-8 px-4 sm:px-8 xl:px-28
 }
+
+.card {
+    @apply  py-2 px-4 flex flex-col justify-center items-start rounded-md
+    shadow-md
+}
+
 
 @tailwind utilities;

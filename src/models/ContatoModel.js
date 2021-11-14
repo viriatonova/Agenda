@@ -21,8 +21,13 @@ class Contato {
 
     async buscaId(id) {
         if (typeof id !== 'string') return;
-        const user = await ContatoModel.findById(id);
-        return user;
+        const contato = await ContatoModel.findById(id);
+        return contato;
+    }
+
+    async buscaContatos() {
+        const contatos = await ContatoModel.find().sort({create: -1});
+        return contatos;
     }
 
     async register() {
@@ -61,6 +66,7 @@ class Contato {
             description: this.body.description
         }
     }
+
 }
 
 module.exports = Contato;
