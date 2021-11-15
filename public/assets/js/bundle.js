@@ -17343,7 +17343,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cardStyle__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_cardStyle__WEBPACK_IMPORTED_MODULE_2__);
 
 
-
+ // function findEmail() {
+//     const btnEdit = document.querySelectorAll('.edit-contact');
+//     btnEdit.forEach(element => {
+//         element.addEventListener('click', () => {
+//             alert('okays');
+//         });
+//     }); 
+// }
+// findEmail();
 })();
 
 /******/ })()

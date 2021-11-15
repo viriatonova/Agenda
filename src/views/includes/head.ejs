@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/tailwind.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Project Name</title>
+    <title>Virtual Agenda</title>
 </head>
 <body class="w-full h-full"></body>
 
     <header class="w-full h-full py-2 px-4 sm:px-8 flex justify-end items-center bg-green-900 text-white">
         <a class="w-full"  href="/">
-            <h1 class="w-full text-lg md:text-xl font-medium tracking-wide">Agenda Virtual</h1>
+            <h1 class="w-full text-lg md:text-xl font-medium tracking-wide">Virtual Agenda</h1>
         </a>
         <div id="menu-right" class="w-full flex justify-end items-center">
-            <a class="mr-4 sm:mr-10 flex justify-center items-center" href="/contato"><span class="material-icons">add</span></a>
             <% if(!user) { %>
                 <a class="mr-4 sm:mr-10 flex justify-center items-center" href="/login"><span class="material-icons">login</span></a>
-            <% } else { %>
-                <span class="mr-4 sm:mr-10"><%= user.nome %></span>
-                <a class="flex justify-center items-center"  href="/login/logout"><span class="material-icons">logout</span></a>
+                <% } else { %>
+                    <span class="mr-4 sm:mr-10"><%= user.nome %></span>
+                    <a class="mr-4 sm:mr-10 flex justify-center items-center" href="/contato"><span class="material-icons">add</span></a>
+                    <a class="flex justify-center items-center"  href="/login/logout"><span class="material-icons">logout</span></a>
             <% } %>
         </div>
     </header>

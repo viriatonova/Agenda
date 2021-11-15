@@ -1,7 +1,9 @@
 const Contato = require('../models/ContatoModel');
 
 exports.index = (req, resp) => {
-    resp.render('contato');
+    resp.render('contato', {
+        contato: {}
+    });
 };
 
 
@@ -37,3 +39,26 @@ exports.editContato = async (req, resp) => {
         contato: user
     });
 };
+
+exports.edit = async (req, resp) => {
+    try {
+        if (!req.params.id) return resp.render('404');
+    
+        const contato = new Contato(req.body);
+        await contato.edit(req.params.id);
+    
+        if (contato.errors.length > 0) {
+            req.flash('errors', contato.errors);
+            req.session.save(() => resp.redirect('back'));
+            return;
+        }
+    
+        req.flash('success', 'success edit');
+        req.session.save(() => resp.redirect(`/contato/${contato.contato._id}`));
+        return;
+    } catch (e) {
+        console.log(e);
+        resp.render('404');
+    }
+}
+
