@@ -4,8 +4,10 @@ const app = express();
 const mongoose = require('mongoose');
 
 // DB conection
-mongoose.connect(process.env.CONNECTIONSTRING)
-.then(() => {
+mongoose.connect(process.env.CONNECTIONSTRING, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(() => {
     app.emit('pronto');
 })
 .catch(e => console.log(e));

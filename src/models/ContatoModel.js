@@ -21,6 +21,7 @@ class Contato {
 
     async buscaId(id) {
         if (typeof id !== 'string') return;
+        if (typeof id !== 'string') return;
         const contato = await ContatoModel.findById(id);
         return contato;
     }
@@ -28,6 +29,12 @@ class Contato {
     async buscaContatos() {
         const contatos = await ContatoModel.find().sort({create: -1});
         return contatos;
+    }
+
+    async delete(id) {
+        if (typeof id !== 'string') return;
+        const contato = await ContatoModel.findOneAndDelete({_id: id});
+        return contato;
     }
 
     async edit(id) {

@@ -19,7 +19,8 @@ exports.register = async (req, resp) => {
         }
     
         req.flash('success', 'success register');
-        req.session.save(() => resp.redirect(`/contato/${contato.contato._id}`));
+        req.session.save(() => resp.redirect('/'));
+        // req.session.save(() => resp.redirect(`/contato/${contato.contato._id}`));
         return;
     } catch (e) {
         console.log(e);
@@ -61,4 +62,18 @@ exports.edit = async (req, resp) => {
         resp.render('404');
     }
 }
+
+exports.delete = async (req, resp) => {
+    if (!req.params.id) return resp.render('404');
+
+    const contato = new Contato(req.body);
+    const userContato = await contato.delete(req.params.id);
+
+    if (!userContato) return resp.render('404');
+
+    req.flash('success', 'success to delete contact');
+    req.session.save(() => resp.redirect('back'));
+    return;
+};
+
 

@@ -1,7 +1,7 @@
 <%- include('includes/head'); %>
 
     <main class="flex flex-col p-2 sm:py-6 sm:px-8">
-
+        <%- include('includes/menssages'); %>
         <section class="w-full h-auto mt-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 grid-flow-cols-dense" >
             <% contatos.forEach(contato => { %> 
                 <article class="card w-full h-full">
@@ -26,8 +26,8 @@
                             <%= contato.create.toLocaleDateString('pt-BR', {weekday: 'long', day:'numeric', month:'numeric', year:'numeric'}) %>
                         </span>
                         <div class="w-1/3 flex justify-end items-end">
-                            <button class="edit-contact material-icons p-2 text-gray-500">edit</button>
-                            <button class="edit-contact material-icons p-2 text-gray-500">clear</button>
+                            <a href="/contato/<%= contato.id %>" class="edit-contact material-icons p-2 text-gray-500">edit</a>
+                            <a href="/contato/delete/<%= contato.id %>" class="edit-contact material-icons p-2 text-gray-500">clear</a>
                         </div>
                     </footer>
                 </article>

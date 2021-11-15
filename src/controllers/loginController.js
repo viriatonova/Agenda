@@ -2,7 +2,7 @@ const Register = require('../models/RegisterModel')
 
 
 exports.index = (req, resp) => {
-    if (req.session.user) return resp.render('bemvindo');
+    if (req.session.user) return resp.redirect('/');
     return resp.render('login');
 };
 
