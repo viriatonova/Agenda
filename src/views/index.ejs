@@ -7,27 +7,27 @@
                 <article class="card w-full h-full">
                     <div class="flex">
                         <span class="material-icons">perm_identity</span>
-                        <h3 class="ml-4"><%= `${contato.nome} ${contato.sobrenome}` %> </h3>
+                        <h3 class="ml-4 font-semibold text-gray-900"><%= `${contato.nome} ${contato.sobrenome}` %> </h3>
                     </div>
                     <div class="flex">
                         <span class="material-icons">phone</span>
-                        <p class="ml-4"><%= contato.phone %></p>
+                        <p class="ml-4 font-light text-gray-900"><%= contato.phone %></p>
                     </div>
                     <div class="flex">
                         <span class="material-icons">email</span>
-                        <p class="ml-4"><%= contato.email %></p>
+                        <p class="ml-4 font-light text-gray-900"><%= contato.email %></p>
                     </div>
                     <div class="flex">
                         <span class="material-icons">subject</span>
-                        <p class="ml-4"><%= contato.description %></p>
+                        <p class="ml-4 font-light text-gray-900"><%= contato.description %></p>
                     </div>
                     <footer class="w-full h-full flex items-end justify-start space-x-1">
-                        <span class="w-2/3 justify-self-start text-gray-700">
-                            <%= contato.create.toLocaleDateString('pt-BR', {weekday: 'long', day:'numeric', month:'numeric', year:'numeric'}) %>
+                        <span class="w-2/3 justify-self-start text-green-900">
+                            <%= contato.create.toLocaleDateString('en', {weekday: 'long', day:'numeric', month:'numeric', year:'numeric'}) %>
                         </span>
                         <div class="w-1/3 flex justify-end items-end">
-                            <a href="/contato/<%= contato.id %>" class="edit-contact material-icons p-2 text-gray-500">edit</a>
-                            <a href="/contato/delete/<%= contato.id %>" class="edit-contact material-icons p-2 text-gray-500">clear</a>
+                            <a href="/contato/<%= contato.id %>" class="edit-contact material-icons p-2 text-green-900">edit</a>
+                            <a href="/contato/delete/<%= contato.id %>" class="edit-contact material-icons p-2 text-green-900">clear</a>
                         </div>
                     </footer>
                 </article>

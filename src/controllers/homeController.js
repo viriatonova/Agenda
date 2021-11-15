@@ -5,4 +5,3 @@ exports.index = async (req, resp) => {
     const contatos = await contato.buscaContatos();
     resp.render('index', { contatos: contatos });
 }
-

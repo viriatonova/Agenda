@@ -9,7 +9,12 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'lato': ['Lato', 'sans-serif'],
+        'Lobster': ['"Lobster Two"', 'cursive']
+      }
+    },
   },
   variants: {
     extend: {},

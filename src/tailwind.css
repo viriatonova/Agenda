@@ -2,7 +2,7 @@
 @tailwind components;
 
 .titles {
-    @apply py-2 text-2xl sm:text-3xl text-pink-600 font-semibold tracking-wider
+    @apply py-2 text-2xl sm:text-3xl text-pink-600 font-semibold tracking-wider font-Lobster
 }
 
 .paragraphs {

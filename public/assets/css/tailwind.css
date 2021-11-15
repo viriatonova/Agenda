@@ -637,6 +637,7 @@ video {
 .titles {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-family: "Lobster Two", cursive;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
@@ -22515,6 +22516,14 @@ video {
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-lato {
+  font-family: Lato, sans-serif;
+}
+
+.font-Lobster {
+  font-family: "Lobster Two", cursive;
 }
 
 .text-xs {
@@ -54097,6 +54106,14 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .sm\:font-lato {
+    font-family: Lato, sans-serif;
+  }
+
+  .sm\:font-Lobster {
+    font-family: "Lobster Two", cursive;
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -85323,6 +85340,14 @@ video {
 
   .md\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .md\:font-lato {
+    font-family: Lato, sans-serif;
+  }
+
+  .md\:font-Lobster {
+    font-family: "Lobster Two", cursive;
   }
 
   .md\:text-xs {
@@ -116553,6 +116578,14 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-lato {
+    font-family: Lato, sans-serif;
+  }
+
+  .lg\:font-Lobster {
+    font-family: "Lobster Two", cursive;
+  }
+
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -147781,6 +147814,14 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-lato {
+    font-family: Lato, sans-serif;
+  }
+
+  .xl\:font-Lobster {
+    font-family: "Lobster Two", cursive;
+  }
+
   .xl\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -179007,6 +179048,14 @@ video {
 
   .\32xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .\32xl\:font-lato {
+    font-family: Lato, sans-serif;
+  }
+
+  .\32xl\:font-Lobster {
+    font-family: "Lobster Two", cursive;
   }
 
   .\32xl\:text-xs {
