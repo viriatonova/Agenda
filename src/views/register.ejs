@@ -2,18 +2,18 @@
 
     <main class="w-full h-full flex justify-center items-center">
         <section class="form-geral">
-            <h2 class="py-2 text-5xl text-pink-600 font-bold tracking-wider font-Lobster">Register</h2>
+            <h2 class="titles">Register</h2>
             <p class="py-2 text-lg text-gray-600 font-light tracking-wide">
                 this agenda is version beta, your account will be 
                 remember just for seven days. 
             </p>
             <%- include('includes/menssages'); %>
-            <form class="w-full h-full mt-4 flex flex-col justify-center" action="/register" method="post">
+            <form id="form-register" class="w-full h-full mt-4 flex flex-col justify-center" action="/register" method="post">
                 <input type="hidden" name="_csrf" value="<%= _csrf %>">
                 <label class="ml-2" for="nome">Nome</label>
-                <input class="form-input mt-px px-3" type="text" name="nome" placeholder="Ex: João Silva">
+                <input class="form-input mt-px px-3" type="text" name="nome" placeholder="Ex: David Hume">
                 <label class="mt-4 ml-2" for="email">E-mail</label>
-                <input class="form-input mt-px px-3" type="text" name="email" placeholder="Ex: seuemail@mail.com">
+                <input class="form-input mt-px px-3" type="text" name="email" placeholder="Ex: youremail@mail.com">
                 <label class="mt-4 ml-2" for="password">Password</label>
                 <input class="form-input mt-px px-3" type="password" name="password">
                 <button type="submit" class="w-full h-full mt-8 py-2 form-buttom">Sing up</button>
