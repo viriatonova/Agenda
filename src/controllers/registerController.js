@@ -18,7 +18,7 @@ exports.handleRegister = async function (req, resp) {
         }
         req.flash('success', 'success to create user');
         req.session.save(function() {
-            return resp.redirect('back');
+            return resp.redirect('/login');
         });
     } catch (e) {
         console.log(e);
