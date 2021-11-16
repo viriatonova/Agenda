@@ -6,7 +6,7 @@ This is a study project in JavaScript full-stack web development. After login, t
 
 <br>
 
-### Languages and Tecnologs
+### Languages and Tecnologies
 
 
 * **Front-end**: Vanilla JavaScript and Tailwindcss
